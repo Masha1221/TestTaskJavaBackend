@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd ">
+
+    <changeSet id="1" author="Mariya">
+        <createTable tableName="products">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(1000)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="Mariya">
+        <insert tableName="products">
+            <column name="name" value="Oleg"/>
+            <column name="description" value="manager"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Karina"/>
+            <column name="description" value="salesman"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Elena"/>
+            <column name="description" value="manager"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Mariya"/>
+            <column name="description" value="salesman"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Eva"/>
+            <column name="description" value="senior manager"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Stas"/>
+            <column name="description" value="headmaster"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Ekaterina"/>
+            <column name="description" value="cleaning woman"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Kamila"/>
+            <column name="description" value="salesman"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Vitaliy"/>
+            <column name="description" value="courier"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Natali"/>
+            <column name="description" value="consultant"/>
+        </insert>
+
+
+
+    </changeSet>
+</databaseChangeLog>
